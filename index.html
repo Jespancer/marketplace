@@ -2,68 +2,32 @@
 <html>
 
 <head>
-  <title>Marketplace</title>
+    <title>Marketplace</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
-  <p>Marketplace</p>
-  <p id=items></p>
-  <button type="button" onclick="changePage()" id="changePage">Sell</button>
-  <form id="form">
-    <label>Title:</label>
-    <input type="text" name="itemTitle">
-    <label>Price:</label>
-    <input type="text" name="itemPrice">
-    <label>Description:</label>
-    <input type="text" name="itemDescription">
-    <label>Image:</label>
-    <input type="text" name="itemImage">
-    <label>Name:</label>
-    <input type="text" name="sellerName">
-    <label>City:</label>
-    <input type="" name="sellerCity">
-    <label>Phone number:</label>
-    <input type="text" name="sellerPhoneNumber">
-  </form>
-  <style type="text/css">
-  form {
-    width: 250px;
-  }
-  </style>
-  <script type="text/javascript">
-  // List of items with their information
-  // Attributes for each item: itemTitle, itemPrice, itemDescription, itemImage, sellerName, sellerCity, sellerPhoneNumber.
-  let items = [{
-    itemTitle: "Bicycle",
-    itemPrice: 50,
-    itemDescription: "2 years old. Used a couple of times a week",
-    itemImage: "https://upload.wikimedia.org/wikipedia/commons/4/48/Whippet_Safety_Bicycle.jpg",
-    sellerName: "John",
-    sellerCity: "London",
-    sellerPhoneNumber: "123123123"
-  }];
-  // Sell button, Adding each items property
-  // Change to page to selling page and vice versa
-  document.getElementsById("form").style.display = "none";
-
-  function changePage() {
-    if (document.getElementById("changePage").innerHTML === "Sell") {
-      document.getElementsById("form").style.display = "block";
-      document.getElementById("changePage").innerHTML = "Buy";
-    } else {
-      document.getElementById("changePage").innerHTML = "Sell";
-    }
-    // Fill in each property with a form
-  }
-  // Display all properties of each item
-  function displayList {
-    for (var i = items.length - 1; i >= 0; i--) {
-      document.write(items[i]);
-    }
-    document.getElementById("items").innerHTML = items;
-  }
-  // Remove your item
-  </script>
+    <p>Marketplace</p>
+    <p id=items></p>
+    <button type="button" onclick="changePage()" id="button">Sell</button>
+    <form id="form">
+        <label>Title:</label>
+        <input type="text" name="itemTitle">
+        <label>Price:</label>
+        <input type="text" name="itemPrice">
+        <label>Description:</label>
+        <input type="text" name="itemDescription">
+        <label>Image:</label>
+        <input type="text" name="itemImage">
+        <label>Name:</label>
+        <input type="text" name="sellerName">
+        <label>City:</label>
+        <input type="" name="sellerCity">
+        <label>Phone number:</label>
+        <input type="text" name="sellerPhoneNumber">
+        <button type="submit">Publish</button>
+    </form>
 </body>
 
 </html>

@@ -1,0 +1,9 @@
+form {
+    display: none;
+    flex-direction: column;
+    width: 300px;
+}
+
+#buttonBack {
+    display: none;
+}
